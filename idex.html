@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en línea</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        main {
+            padding: 20px;
+        }
+        .product {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+        }
+        .product img {
+            width: 200px;
+            height: 200px;
+        }
+        .product h3 {
+            margin-top: 10px;
+        }
+        .product p {
+            margin-top: 5px;
+        }
+        .product button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Logo</a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle">
+                <img src="images/.png" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/s2.png" alt="Rosa">
+            <h3>Rosa Roja</h3>
+            <p>15.99$</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="header-content container">
+            <div class="header-text">
+                <span>Bienvenido a nuestra tienda</span>
+                <h1>Ofertas especiales</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error cumque cum porro quas voluptatum rerum natus eos. Fugiat quisquam neque ipsa exercitationem quas ullam voluptates nobis molestiae qui officiis.</p>
+                <div class="buttons">
+                    <a href="#" class="btn-1">Información</a>
+                    <a href="#" class="btn-1">Leer más</a>
+                </div>
+            </div>
+            <div class="header-image">
+                <img src="images/bag.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="offers container">
+        <!--nbldvan las ofertas -->
+    </section>
+
+    <main class="products container">
+        <h2>Productos</h2>
+        <div class="product-container" id="product-list">
+            <!-- Aquí van los productos -->
+        </div>
+        <div class="btn-2" id="load-more">Cargar más</div>
+    </main>
+
+    <section class="testimonials container">
+        <span>Testimoniales</span>
+        <h2>Qué opinan nuestros clientes</h2>
+        <div class="testimonial-content">
+            <!-- Aquí van los testimonios -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <!-- Aquí van los enlaces del footer -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
