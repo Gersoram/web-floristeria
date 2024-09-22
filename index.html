@@ -1,196 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda en línea</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Estilos CSS */
-        body {
-            font-family: Arial, sans-serif;
+        .product-detail {
+            width: 360px;
+            padding: 24px;
+            box-sizing: border-box;
+            position: absolute;
+            right: 0;
+            display: none; /* Oculto por defecto */
+            background-color: #fff; /* Fondo blanco para el detalle */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+            z-index: 1000; /* Asegurarse de que esté encima */
+        }
+        .product-detail.open {
+            display: block; /* Mostrar cuando está abierto */
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+        }
+        .title-container img {
+            transform: rotate(180deg);
+            margin-right: 14px;
+        }
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .shopping-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+        .shopping-cart figure {
             margin: 0;
-            padding: 0;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .shopping-cart figure img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
         }
-        nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            background-color: #4CAF50;
-        }
-        main {
-            padding: 20px;
-        }
-        .product {
-            display: inline-block;
-            width: 300px;
-            margin: 20px;
-            text-align: center;
-        }
-        .product img {
-            width: 200px;
-            height: 200px;
-        }
-        .product h3 {
-            margin-top: 10px;
-        }
-        .product p {
-            margin-top: 5px;
-        }
-        .product button {
-            background-color: #4CAF50;
-            color: white;
+        .primary-button {
+            background-color: #4CAF50; /* Cambia según tu diseño */
+            border-radius: 8px;
             border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #333;
             color: white;
-            padding: 10px;
-            text-align: center;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1rem; /* Ajustar según sea necesario */
+            font-weight: bold;
+            height: 50px;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo">Logo</a>
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle">
-                <img src="images/.png" alt="">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="product">
-            <img src="images/s2.png" alt="Rosa">
-            <h3>Rosa Roja</h3>
-            <p>15.99$</p>
-            <button>Añadir al carrito</button>
-        </div>
-        <div class="header-content container">
-            <div class="header-text">
-                <span>Bienvenido a nuestra tienda</span>
-                <h1>Ofertas especiales</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde error cumque cum porro quas voluptatum rerum natus eos. Fugiat quisquam neque ipsa exercitationem quas ullam voluptates nobis molestiae qui officiis.</p>
-                <div class="buttons">
-                    <a href="#" class="btn-1">Información</a>
-                    <a href="#" class="btn-1">Leer más</a>
-                </div>
-            </div>
-            <div class="header-image">
-                <img src="images/bag.png" alt="">
-            </div>
+    <header class="bg-success text-white text-center p-4">
+        <div class="container">
+            <h1>Bienvenido a nuestra tienda</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn btn-light">Información</a>
+            <a href="#" class="btn btn-light">Leer más</a>
         </div>
     </header>
 
-    <section class="offers container">
-        <!--nbldvan las ofertas -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Productos -->
+    <div class="container mt-5">
+        <h2 class="text-center">Productos</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="images/s2.png" class="card-img-top" alt="Rosa Roja">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosa Roja</h5>
+                        <p class="card-text">15.99$</p>
+                        <a href="#" class="btn btn-success add-to-cart">Añadir al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repite los productos según sea necesario -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="images/s2.png" class="card-img-top" alt="Rosa Roja">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosa Roja</h5>
+                        <p class="card-text">15.99$</p>
+                        <a href="#" class="btn btn-success add-to-cart">Añadir al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="images/s2.png" class="card-img-top" alt="Rosa Roja">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosa Roja</h5>
+                        <p class="card-text">15.99$</p>
+                        <a href="#" class="btn btn-success add-to-cart">Añadir al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <img src="images/s2.png" class="card-img-top" alt="Rosa Roja">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosa Roja</h5>
+                        <p class="card-text">15.99$</p>
+                        <a href="#" class="btn btn-success add-to-cart">Añadir al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary">Cargar más</button>
+        </div>
+    </div>
+
+    <!-- Detalles del pedido -->
+    <aside class="product-detail" id="orderDetails">
+        <div class="title-container">
+            <img src="./icons/flechita.svg" alt="arrow">
+            <p class="title">My order</p>
+        </div>
+
+        <div class="my-order-content">
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                </figure>
+                <p>Bike</p>
+                <p>$30,00</p>
+                <img src="./icons/icon_close.png" alt="close">
+            </div>
+            <button class="primary-button">Checkout</button>
+        </div>
+    </aside>
+
+    <section class="bg-light text-center py-5">
+        <div class="container">
+            <h2>Qué opinan nuestros clientes</h2>
+            <p>Testimonio de cliente 1</p>
+        </div>
     </section>
 
-    <main class="products container">
-        <h2>Productos</h2>
-        <div class="product-container" id="product-list">
-            <!-- Aquí van los productos -->
-        </div>
-        <div class="btn-2" id="load-more">Cargar más</div>
-    </main>
-
-    <section class="testimonials container">
-        <span>Testimoniales</span>
-        <h2>Qué opinan nuestros clientes</h2>
-        <div class="testimonial-content">
-            <!-- Aquí van los testimonios -->
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-content container">
-            <!-- Aquí van los enlaces del footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Tienda en línea. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const itemCount = document.getElementById('itemCount');
+        const orderDetails = document.getElementById('orderDetails');
+        let count = 0;
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                count++;
+                itemCount.innerText = count;
+                orderDetails.classList.add('open'); // Mostrar detalles del pedido
+            });
+        });
+
+        document.getElementById('toggleCart').addEventListener('click', () => {
+            orderDetails.classList.toggle('open'); // Alternar visibilidad del pedido
+        });
+    </script>
 </body>
 </html>
-
